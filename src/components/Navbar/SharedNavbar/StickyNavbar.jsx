@@ -40,14 +40,14 @@ export function StickyNavbar() {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-black">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-white">
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center hover:text-orange-200">
           Home
         </Link>
       </Typography>
@@ -57,7 +57,7 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="/about-us" className="flex items-center">
+        <Link to="/about-us" className="flex items-center hover:text-orange-200">
           About Us
         </Link>
       </Typography>
@@ -67,7 +67,7 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="/blog" className="flex items-center">
+        <Link to="/blog" className="flex items-center hover:text-orange-200">
           Blog
         </Link>
       </Typography>
@@ -77,7 +77,7 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="/contact" className="flex items-center">
+        <Link to="/contact" className="flex items-center hover:text-orange-200">
           Contact
         </Link>
       </Typography>
@@ -85,15 +85,17 @@ export function StickyNavbar() {
   );
 
   return (
-    <div className="-m-6 max-h-[768px] w-[calc(100%+48px)]">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 mt-6">
+    <div className="-mt-6 max-h-[768px] w-full bg-orange-600 text-white">
+      <Navbar className="top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 mt-6">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
             href="#"
-            className="mr-4 cursor-pointer py-1.5 font-medium text-black"
+            className="mr-4 cursor-pointer py-1.5 font-medium text-black hover:text-gray-900"
           >
-            Material Tailwind
+            <Link to="/">
+              Task Management
+            </Link>
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
@@ -212,34 +214,24 @@ export function StickyNavbar() {
           </div>
         </MobileNav>
       </Navbar>
-      <div className="relative h-full w-full">
+      <div className="relative h-[400px] w-full">
         <img
           src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
           alt="image 1"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-3/4 text-center md:w-2/4">
+          <div className="w-3/4 text-left md:w-2/4">
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl capitalize"
             >
-              The Beauty of Nature
+              Task Management Platform
             </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80"
-            >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that quality
-              of air that emanation from old trees, that so wonderfully changes
-              and renews a weary spirit.
-            </Typography>
-            <div className="flex justify-center gap-2">
+            <div className="flex gap-2">
               <Link to="/login">
-                <Button size="lg" color="white">
+                <Button size="lg" color="white" className="bg-orange-500 text-white rounded px-3 py-1">
                   Let’s Explore
                 </Button>
               </Link>

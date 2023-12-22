@@ -2,13 +2,12 @@
 import { useForm } from 'react-hook-form';
 import {
   Input,
-  Option,
-  Select,
   Textarea,
   Typography,
 } from "@material-tailwind/react";
 import useAxiosPublic from '../../../hooks/useAxiosPublic';
 import Swal from 'sweetalert2';
+import Title from '../../../components/Shared/Title';
 //   import "./CreateTask.css"
 
 export default function CreateTask() {
@@ -39,6 +38,10 @@ export default function CreateTask() {
   return (
     <div>
 
+      <div className="mt-10">
+      <Title heading="Create Task"></Title>
+      </div>
+
       <form onSubmit={handleSubmit(onSubmit)} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-1 flex flex-col gap-6">
           <Typography variant="h6" color="blue-gray" className="-mb-3">
@@ -59,7 +62,7 @@ export default function CreateTask() {
           <Textarea color="red" 
             placeholder="Description"
             {...register("Description", { required: true })}
-            label="Textarea Red" />
+            label="" />
           <Typography variant="h6" color="blue-gray" className="-mb-3">
             Deadlines
           </Typography>
@@ -86,9 +89,9 @@ export default function CreateTask() {
               name="Priority" className="w-full py-2 px-2 border border-blue-gray-200 rounded-lg"
             >
               <option>Select One</option>
-              <option value="low">Low</option>
-              <option value="moderate">Moderate</option>
-              <option value="high">High</option>
+              <option value="Low">Low</option>
+              <option value="Moderate">Moderate</option>
+              <option value="High">High</option>
             </select>
           </div>
 

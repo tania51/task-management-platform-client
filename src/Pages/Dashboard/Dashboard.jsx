@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import {
     Button,
     Card,
@@ -17,7 +17,6 @@ const Dashboard = () => {
     const newTask = useLoaderData();
     const [allTask, setAllTask] = useState(newTask);
     const axiosPublic = useAxiosPublic();
-    console.log(allTask);
 
     const deleteHandeler = id => {
         console.log(id);
@@ -70,8 +69,11 @@ const Dashboard = () => {
                                 {aTask?.Deadlines}
                             </Typography>
                         </CardBody>
-                        <CardFooter onClick={() => deleteHandeler(aTask._id)} className="pt-0">
-                            <Button>Delete</Button>
+                        <CardFooter className="pt-0">
+                            <div onClick={() => deleteHandeler(aTask._id)}>
+                                <Button>Delete</Button>
+                            </div>
+                            <Link to={`/dashboard/editTask/${aTask._id}`}><Button>Edit</Button></Link>
                         </CardFooter>
                     </Card>)
                 }

@@ -15,24 +15,23 @@ const BenefitedPeople = () => {
             <div className="font-bold uppercase text-2xl md:text-3xl lg:text-4xl">
                 User Who can be benefited
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
+
                 {/* developers card */}
-                <Card className="mt-6 border p-3">
+                <Card className="mt-6 border hover:border-orange-600 p-4">
                     <CardBody>
-                    <MdDeveloperMode className="text-2xl text-orange-600 mb-3" />
+                        <MdDeveloperMode className="text-2xl text-orange-600 mb-3" />
                         <Typography variant="h5" color="blue-gray" className="mb-2">
-                            Web Developers
+                            Developers
                         </Typography>
-                        <Typography>
-                            Because it&apos;s about motivating the doers. Because I&apos;m here to
-                            follow my dreams and inspire others.
+                        <Typography className="pb-2">
+                        A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.
                         </Typography>
                     </CardBody>
                     <CardFooter className="pt-0">
                         <a href="#" className="inline-block">
-                            <Button size="sm" variant="text" className="flex items-center gap-2">
-                                Learn More
+                            <Button size="sm" variant="text" className="flex items-center gap-2 bg-orange-500 text-white px-3 py-1 rounded mt-2 hover:bg-orange-600">
+                                See Benefit
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -53,21 +52,20 @@ const BenefitedPeople = () => {
                 </Card>
 
                 {/* corporate professionals card */}
-                <Card className="mt-6 border p-3">
+                <Card className="mt-6 border hover:border-orange-500 p-4">
                     <CardBody>
-                    <MdCorporateFare className="text-3xl text-orange-600 mb-2" />
+                        <MdCorporateFare className="text-3xl text-orange-600 mb-2" />
                         <Typography variant="h5" color="blue-gray" className="mb-2">
-                        Corporate Professionals
+                            Corporate Professionals
                         </Typography>
-                        <Typography>
-                            Because it&apos;s about motivating the doers. Because I&apos;m here to
-                            follow my dreams and inspire others.
+                        <Typography className="pb-2">
+                        Corporate Professional means employees who are employed at Corporate Professional Levels A, B or C.
                         </Typography>
                     </CardBody>
                     <CardFooter className="pt-0">
                         <a href="#" className="inline-block">
-                            <Button size="sm" variant="text" className="flex items-center gap-2">
-                                Learn More
+                            <Button size="sm" variant="text" className="flex items-center gap-2 bg-orange-500 text-white px-3 py-1 rounded mt-2 hover:bg-orange-600">
+                                See Benefit
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -88,21 +86,20 @@ const BenefitedPeople = () => {
                 </Card>
 
                 {/* bankers card */}
-                <Card className="mt-6 border p-3">
+                <Card className="mt-6 border hover:border-orange-500 p-4">
                     <CardBody>
-                    <BsBank className="text-2xl text-orange-600 mb-2" />
+                        <BsBank className="text-2xl text-orange-600 mb-2" />
                         <Typography variant="h5" color="blue-gray" className="mb-2">
-                        Bankers
+                            Bankers
                         </Typography>
-                        <Typography>
-                            Because it&apos;s about motivating the doers. Because I&apos;m here to
-                            follow my dreams and inspire others.
+                        <Typography className="pb-2">
+                        A banker’s job entails a wide range of activities and obligations. Bankers come in a variety of shapes and sizes.
                         </Typography>
                     </CardBody>
                     <CardFooter className="pt-0">
                         <a href="#" className="inline-block">
-                            <Button size="sm" variant="text" className="flex items-center gap-2">
-                                Learn More
+                            <Button size="sm" variant="text" className="flex items-center gap-2 bg-orange-500 text-white px-3 py-1 rounded mt-2 hover:bg-orange-600">
+                                See Benefit
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"

@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
  
 const LINKS = [
   {
@@ -7,11 +8,7 @@ const LINKS = [
   },
   {
     title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
-  },
-  {
-    title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    items: [ "Careers", "Press", "News"],
   },
 ];
  
@@ -19,13 +16,59 @@ const currentYear = new Date().getFullYear();
  
 export function Footer() {
   return (
-    <footer className="relative w-full pt-10">
+    <footer className="relative w-full pt-10 bg-orange-700 text-white">
       <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="mb-6">
-            Material Tailwind
-          </Typography>
-          <div className="grid grid-cols-3 justify-between gap-4">
+        <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center w-full gap-4">
+          <ul>
+                <Typography
+                  variant="small"
+                  color="blue-gray"
+                  className="mb-3 font-medium opacity-40"
+                >
+                  Pages
+                </Typography>
+                  <li>
+                    <Typography
+                      as="a"
+                      href="#"
+                      color="gray"
+                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                    >
+                      <Link to="/">Home</Link>
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      as="a"
+                      href="#"
+                      color="gray"
+                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                    >
+                      <Link to="/about-us">About Us</Link>
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      as="a"
+                      href="#"
+                      color="gray"
+                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                    >
+                      <Link to="/blog">Blog</Link>
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      as="a"
+                      href="#"
+                      color="gray"
+                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                    >
+                      <Link to="/contact">Contact</Link>
+                    </Typography>
+                  </li>
+              </ul>
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
@@ -56,7 +99,7 @@ export function Footer() {
             variant="small"
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
-            &copy; {currentYear} <a href="https://material-tailwind.com/">Material Tailwind</a>. All
+            &copy; {currentYear} <a href="https://material-tailwind.com/">Task Management Platform</a>. All
             Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
