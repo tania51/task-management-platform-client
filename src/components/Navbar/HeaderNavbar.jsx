@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 
 const NavList =
-    <div className="mt-20 text-black">
+    <div className="text-black">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
     </div>
@@ -68,7 +68,7 @@ const NavList =
 //   );
 // }
 
-export function NavbarWithMegaMenu() {
+function HeaderNavbar() {
     const [openNav, setOpenNav] = React.useState(false);
 
     React.useEffect(() => {
@@ -101,7 +101,7 @@ export function NavbarWithMegaMenu() {
                     </Button>
                 </div>
             </div>
-            <Collapse open={openNav}>
+            <Collapse className="lg:hidden" open={openNav}>
                 {NavList}
                 <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
                     <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
@@ -115,3 +115,5 @@ export function NavbarWithMegaMenu() {
         </Navbar>
     );
 }
+
+export default HeaderNavbar;

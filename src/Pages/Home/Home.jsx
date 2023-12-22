@@ -1,11 +1,12 @@
-import { NavbarWithMegaMenu } from "../../components/Navbar/Navbar";
+
+import BenefitedPeople from "./BenefitedPeople/BenefitedPeople";
+
 
 
 const Home = () => {
     return (
-        <div>
-            <NavbarWithMegaMenu></NavbarWithMegaMenu>
-            <h2>This is home page</h2>
+        <div className="px-10 md:px-20">
+            <BenefitedPeople></BenefitedPeople>
         </div>
     );
 };

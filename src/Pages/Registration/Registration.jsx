@@ -8,6 +8,8 @@ import signUpImg from "../../assets/login.jpg"
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { updateProfile } from "firebase/auth";
+import auth from "../../Firebase/firebase.config";
 
 const Registration = () => {
     const { signUp, googleSignUp } = useContext(AuthContext)
@@ -17,13 +19,24 @@ const Registration = () => {
         const form = e.target;
 
         const name = form.name.value;
+        const image = form.image.value;
         const email = form.email.value;
         const pass = form.password.value;
-        console.log(name, email, pass);
+        console.log(name, email, pass, image);
 
         signUp(email, pass)
             .then(res => {
                 console.log(res);
+                updateProfile(auth.currentUser, {
+                    displayName: name,
+                    photoURL: image
+                })
+                .then(res => {
+                    console.log('profile updated');
+                })
+                .catch(err => {
+                    console.log(RangeError);
+                })
             })
             .catch(err => {
                 console.log(err.message);
